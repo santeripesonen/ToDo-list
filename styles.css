@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.todo-done {
+    text-decoration: line-through;
+    text-decoration-color: rgb(255, 0, 0);
+    text-decoration-thickness: 2px;
+}
+
+body {
+    background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+    background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+    background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+.todo-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid gray;
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+.todo-item {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.todo-item p {
+    cursor: pointer;
+}
+
+.todo-item button {
+    margin-left: 10px;
+}
+
+.todo-list-container {
+    border: 1px solid white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.justdoit {
+    font-size: 84px;
+    font-family: 'Indie Flower', sans-serif;
+    transform: rotate(-25deg);
+    text-decoration: line-through;
+    text-decoration-color: rgb(238, 20, 20);
+    text-decoration-thickness: 6px;
+    margin-top: 64px;
+}
+
+.btn {
+    background-color: rgb(189, 16, 16);
+    color: white;
+    border: none;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: rgb(224, 29, 29);
+    cursor: pointer;
+}
+
+#todo-header {
+    font-size: 20px;
+}
