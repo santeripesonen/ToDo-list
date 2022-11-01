@@ -31,21 +31,25 @@ function clearTodo() {
 
 function addTodo() {
     const inputText = document.getElementById("todo-input").value
-    let id = 1;
-    if (todoItems.length > 0) {
-        id = todoItems[todoItems.length - 1].id + 1
-    }
+    if (inputText.length < 4) {
+        showError()
+    } else {
+        let id = 1;
+        if (todoItems.length > 0) {
+            id = todoItems[todoItems.length - 1].id + 1
+        }
 
-    const newTodo = {
-        id: id,
-        text: inputText,
-        done: false
-    }
+        const newTodo = {
+            id: id,
+            text: inputText,
+            done: false
+        }
 
-    todoItems.push(newTodo)
-    // siivotaan kenttä
-    renderTodos()
-    clearTodo()
+        todoItems.push(newTodo)
+        // siivotaan kenttä
+        renderTodos()
+        clearTodo()
+    }
 }
 
 // poistetaan tietty todo listasta
@@ -54,6 +58,18 @@ function deleteTodo(id) {
     todoItems = newTodoItems;
     renderTodos()
 
+}
+
+function showError() {
+    const inputField = document.getElementById("todo-input")
+    const inputError = document.getElementById("input-error")
+    inputField.style.border = "2px solid red"
+    inputError.classList.remove("hidden")
+
+    setTimeout(() => {
+        inputField.style.border = "none"
+        inputError.classList.add("hidden")
+    }, 3000)
 }
 
 // ladataan todot näkyville
